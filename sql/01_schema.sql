@@ -1,0 +1,25 @@
+-- Schema: table + churn_flag
+CREATE TABLE IF NOT EXISTS telco_customer_churn (
+  customerID VARCHAR(50) PRIMARY KEY,
+  gender VARCHAR(10),
+  SeniorCitizen INT,
+  Partner VARCHAR(3),
+  Dependents VARCHAR(3),
+  tenure INT,
+  PhoneService VARCHAR(20),
+  MultipleLines VARCHAR(30),
+  InternetService VARCHAR(20),
+  OnlineSecurity VARCHAR(30),
+  OnlineBackup VARCHAR(30),
+  DeviceProtection VARCHAR(30),
+  TechSupport VARCHAR(30),
+  StreamingTV VARCHAR(30),
+  StreamingMovies VARCHAR(30),
+  Contract VARCHAR(20),
+  PaperlessBilling VARCHAR(3),
+  PaymentMethod VARCHAR(40),
+  MonthlyCharges DECIMAL(10,2),
+  TotalCharges DECIMAL(10,2),
+  Churn VARCHAR(3),
+  churn_flag TINYINT GENERATED ALWAYS AS (CASE WHEN Churn='Yes' THEN 1 ELSE 0 END) STORED
+);
