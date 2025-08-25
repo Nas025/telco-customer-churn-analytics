@@ -20,13 +20,15 @@ The goal is to identify key churn drivers and generate insights that can support
    - Added churn flag column and handled missing values.  
    - Built views and queries for churn KPIs (e.g., churn by contract type, payment method).  
 
-2. **Exploratory Analysis (Notebooks)**  
+2. **Exploratory Analysis & Modeling (Notebooks)**  
    - Data cleaning and transformation.  
-   - Visualizations of churn distribution across demographics and services.  
-   - Feature importance analysis for churn prediction.  
+   - Visualizations of churn distribution across services, contract, tenure.
+   - Feature importance analysis to understand churn drivers.  
+   - Built predictive model (logistic regression) to estimate churn risk.  
+   - Evaluated models with accuracy, precision/recall. 
 
 3. **Business Intelligence (Power BI)**  
-   - Interactive dashboard with slicers for  services, and contract types.  
+   - Interactive dashboard with slicers for services, and contract types.  
    - Visualizations for churn by monthly charges, tenure, and customer segments.  
    - KPIs and trend charts to highlight at-risk customers.  
 
